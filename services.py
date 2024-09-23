@@ -257,17 +257,6 @@ def administrar_chatbot(text,number, messageId, name):
 			replyReaction = replyReaction_Message(number, messageId, "🫡")
 			list.append(replyReaction)
 			list.append(replyButtonData)
-	elif "servicios" in text:
-		body = "Tenemos varias áreas de consulta para elegir. ¿Cuál de estos servicios te gustaría explorar?"
-		footer = "Equipo Bigdateros"
-		options = ["Analítica Avanzada", "Migración Cloud", "Inteligencia de Negocio"]
-
-		listReplyData = listReply_Message(number, options, body, footer, "sed2",messageId)
-		sticker = sticker_Message(number, get_media_id("perro_traje", "sticker"))
-
-		list.append(listReplyData)
-		list.append(sticker)
-
 	else :
 		data = text_Message(number,"Lo siento, no entendí lo que dijiste. ¿Quieres que te ayude con alguna de estas opciones?")
 		list.append(data)
